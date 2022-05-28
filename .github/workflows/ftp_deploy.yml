@@ -15,7 +15,7 @@ jobs:
         node-version: '16.14'
       
     - name: Build
-    - env:
+      env:
         CI: false
       run: |
         npm install
