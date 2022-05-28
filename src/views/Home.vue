@@ -48,7 +48,7 @@
             </h3>
             <div>
               <p>
-                Hello! I’m Eralp Özcan. I'm currently a Freelance MEVN Stack Software Developer. I have been developing myself in the field of Frontend,Backend for Since 2021.Previously, I had an adventure in artificial intelligence and data analysis for 2 years.I enjoy working in the software field as I have transitioned from the automation field
+                Hello! I’m Eralp Özcan. MEVN Stack Software Developer. I have been developing myself in the field of Frontend,Backend for Since 2021.Previously, I had an adventure in artificial intelligence and data analysis for 2 years.I enjoy working in the software field as I have transitioned from the automation field
               </p>
             </div>
           </div>
