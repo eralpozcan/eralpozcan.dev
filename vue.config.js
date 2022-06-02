@@ -1,5 +1,3 @@
-const { routes } = require('./src/routes.js');
-
 
 module.exports = {
     pluginOptions: {
@@ -24,7 +22,6 @@ module.exports = {
       },
       sitemap: {
         baseURL: 'https://eralpozcan.com',
-        routes,
         }
     }
   }
