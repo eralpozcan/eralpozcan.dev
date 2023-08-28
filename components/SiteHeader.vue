@@ -33,9 +33,11 @@ function ThemeChanger() {
     </div>
     <div class="navbar-end">
       <LanguageSwitcher />
-      <Icon v-if="colorMode.preference === 'dark'" name="heroicons-solid:sun" size="1.5rem"
-          class="fill-current bg-base-200" @click="ThemeChanger()" />
-      <Icon v-else-if="colorMode.preference === 'light'" name="heroicons-solid:moon" size="1.5rem" class="fill-current bg-base-200" @click="ThemeChanger()" />
+      <Button class="btn btn-ghost normal-case text-base" @click="ThemeChanger()" aria-label="Theme Change Icon">
+        <Icon v-if="colorMode.preference === 'dark' || colorMode.value === 'dark'" name="heroicons-solid:sun" size="1.4rem"
+          class="fill-current"/>
+        <Icon v-else-if="colorMode.preference === 'light' || colorMode.value === 'light'" name="heroicons-solid:moon" size="1.4rem" class="fill-current"/>
+      </Button>
     </div>
   </nav>
 </template>

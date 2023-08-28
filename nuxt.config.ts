@@ -25,6 +25,21 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         { hid: 'description', name: 'description', content: 'Eralp Ozcan Personal Website'},
         { hid: 'robots', name: 'robots', content: 'index, follow'},
+        { name: 'og:type', property: 'og:type', content: 'website' },
+        { name: 'og:site_name', property: 'og:site_name', content: 'Eralp Ozcan' },
+        { name: 'og:title', property: 'og:title', content: 'Eralp Ozcan' },
+        { name: 'og:description', property: 'og:description', content: 'Eralp Ozcan Personal Website' },
+        { name: 'og:image', property: 'og:image', content: 'https://eralpozcan.dev/og-image.png' },
+        { name: 'og:locale', property: 'og:locale', content: 'en_US' },
+        { name: 'og:locale:alternate', property: 'og:locale:alternate', content: 'tr_TR'},
+        { name: 'og:url', property: 'og:url', content: 'https://eralpozcan.dev' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@eralpozcan' },
+        { name: 'twitter:creator', content: '@eralpozcan'},
+        { name: 'twitter:title', content: 'Eralp Ozcan' },
+        { name: 'twitter:description', content: 'Eralp Ozcan Personal Website' },
+        { name: 'twitter:image', content: 'https://eralpozcan.dev/og-image.png' },
+        { name: 'application-name', content: 'Eralp Ozcan' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -53,6 +68,7 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     preference: 'system', // default theme
+    fallback: 'light', // fallback theme
     dataValue: 'theme', // activate data-theme in <html> tag
     classSuffix: '',
   },

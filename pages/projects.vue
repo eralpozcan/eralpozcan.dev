@@ -13,7 +13,7 @@
     viewer {
       repositories(
           first: 12
-          orderBy: {field: PUSHED_AT, direction: DESC}
+          orderBy: {field: UPDATED_AT, direction: DESC}
           isLocked: false
           privacy: PUBLIC
       ) {
@@ -22,6 +22,7 @@
               id
               name
               createdAt
+              updatedAt
               description
               url
               homepageUrl
@@ -31,6 +32,14 @@
                       color
                       id
                       name
+                  }
+              }
+              repositoryTopics(first: 5) {
+                  nodes {
+                      topic {
+                          id
+                          name
+                      }
                   }
               }
               openGraphImageUrl

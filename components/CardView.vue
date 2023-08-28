@@ -1,14 +1,15 @@
 <template>
   <div class="card w-96 h-96 bg-base-100 shadow-xl mx-8 my-4">
-    <figure><img :src="data.openGraphImageUrl" alt="Shoes" /></figure>
+    <figure><nuxt-img :src="data.openGraphImageUrl" :alt="data.name + 'preview image'" loading="lazy" width="400" height="190" /></figure>
     <div class="card-body">
       <h2 class="card-title">
         {{ data.name}}
-        <div class="badge badge-secondary">NEW</div>
+        <div v-if="compareDateWithCurrent(data.updatedAt)" class="badge badge-secondary" aria-label="New">NEW</div>
       </h2>
       <p>{{ data.description }}</p>
       <div class="card-actions justify-center" >
-        <div class="badge badge-outline" v-for="usedLanguages in data.languages.nodes"> {{ usedLanguages.name }}</div> 
+        <div class="badge badge-outline" :style="{color:usedLanguages.color}" v-for="usedLanguages in data.languages.nodes"> 
+          {{ usedLanguages.name }}</div> 
       </div>
     </div>
   </div>
@@ -20,7 +21,17 @@ defineProps({
   data: Object
 })
 
+function compareDateWithCurrent(dateString) {
+  return Date.now() - new Date(dateString) <= 7 * 24 * 60 * 60 * 1000;
+}
+
+// Feature Planing
+// function IconBadge(iconName) {
+//   return `devicon:${iconName.toLowerCase()}`
+// }
 </script>
+
+
 
 <style scoped>
 
