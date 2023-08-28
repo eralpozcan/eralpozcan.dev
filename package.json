@@ -34,6 +34,7 @@
     "daisyui": "^3.5.1",
     "graphql": "^16.8.0",
     "nuxt": "^3.6.5",
+    "nuxt-calendly": "^0.1.14",
     "nuxt-icon": "^0.4.2",
     "nuxt-simple-robots": "^3.1.1",
     "nuxt-simple-sitemap": "^3.1.7"

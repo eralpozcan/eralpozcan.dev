@@ -7,9 +7,16 @@
 </template>
 
 
-<script>
-
-
+<script lang="ts" setup>
+onMounted(() => {
+  const config = useRuntimeConfig()
+  if (config.public.calendyStatus === 'true'){
+    const calendly = useCalendly()
+    calendly.initBadgeWidget({
+      url: process.env.NUXT_CALENDLY_URL,
+    })
+  }
+})
 
 </script>
 <style>

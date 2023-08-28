@@ -18,7 +18,7 @@ const config = useRuntimeConfig()
         <label class="label">
           <span class="text-base label-text">{{$t('contact.message')}}</span>
         </label>
-        <textarea name="message" class="w-full textarea textarea-bordered textarea-primary" placeholder="Enter your message here"></textarea>
+        <textarea name="message" class="w-full textarea textarea-bordered textarea-primary" :placeholder="$t('contact.message')"></textarea>
         <button type="submit" class="btn btn-block btn-primary">{{$t('contact.send')}}</button>
       </form>
     </div>

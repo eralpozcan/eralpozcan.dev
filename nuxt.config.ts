@@ -47,10 +47,13 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
         { rel: 'manifest', href: '/site.webmanifest' },
-      ],
+      ]
     },
   },
   runtimeConfig: {
+    public: {
+      calendyStatus: process.env.NUXT_CALENDLY_ENABLED,
+    },
     githubToken: process.env.NUXT_GITHUB_TOKEN,
     contactFormApi: process.env.NUXT_CONTACT_FORM_API,
   },
@@ -65,6 +68,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
+    'nuxt-calendly'
   ],
   colorMode: {
     preference: 'system', // default theme
@@ -94,5 +98,10 @@ export default defineNuxtConfig({
         },
       }
     },
+  },
+  calendly: {
+    isEnabled: true,
+    loadWidgetCSS: true,
+    loadWidgetCloseIconSvg: true,
   },
 })
