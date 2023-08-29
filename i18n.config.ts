@@ -26,7 +26,8 @@ export default defineI18nConfig(() => ({
       cv_download: 'Download CV',
       hello_everyone: '👋🏻 Hello Everyone, I am Eralp Özcan!',
       job_title: 'Frontend Developer',
-      description: "I'm a Full Stack Developer who is passionate about various web technologies. I'm currently working at Protein.Tech as a frontend developer."
+      description: "I'm a Full Stack Developer who is passionate about various web technologies. I'm currently working at Protein.Tech as a frontend developer.",
+      calendly_text: 'Schedule a meeting',
     },
     tr: {
       welcome: 'Hoşgeldiniz',
@@ -52,7 +53,8 @@ export default defineI18nConfig(() => ({
       cv_download: 'CV İndir',
       hello_everyone: '👋🏻 Merhaba,Ben Eralp Özcan!',
       job_title: 'Ön Uç Geliştirici',
-      description: "Ben çeşitli web teknolojileri konusunda tutkulu bir Full Stack Developer'ım. Şu anda Protein.Tech'te ön uç geliştiricisi olarak çalışıyorum."
+      description: "Ben çeşitli web teknolojileri konusunda tutkulu bir Full Stack Developer'ım. Şu anda Protein.Tech'te ön uç geliştiricisi olarak çalışıyorum.",
+      calendly_text: 'Bir toplantı ayarla',
     }
   }
 }))

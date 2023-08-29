@@ -13,7 +13,8 @@ onMounted(() => {
   if (config.public.calendyStatus === 'true'){
     const calendly = useCalendly()
     calendly.initBadgeWidget({
-      url: process.env.NUXT_CALENDLY_URL,
+      url: `${config.public.calendyUrl}`,
+      text: "Schedule time with me",
     })
   }
 })

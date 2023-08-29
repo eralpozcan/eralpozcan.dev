@@ -53,9 +53,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       calendyStatus: process.env.NUXT_CALENDLY_ENABLED,
+      calendyUrl: process.env.NUXT_CALENDLY_URL,
+      contactFormApi: process.env.NUXT_CONTACT_FORM_API
     },
     githubToken: process.env.NUXT_GITHUB_TOKEN,
-    contactFormApi: process.env.NUXT_CONTACT_FORM_API,
   },
   modules: [
     '@nuxtjs/apollo',
@@ -68,7 +69,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
-    'nuxt-calendly'
+    'nuxt-calendly',
+    'nuxt-gtag'
   ],
   colorMode: {
     preference: 'system', // default theme
@@ -98,6 +100,10 @@ export default defineNuxtConfig({
         },
       }
     },
+  },
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GA_ID,
+    loadingStrategy: 'async',
   },
   calendly: {
     isEnabled: true,
