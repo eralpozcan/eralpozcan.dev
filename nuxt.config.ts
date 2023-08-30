@@ -67,6 +67,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     'nuxt-icon',
+    'nuxt-security',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-calendly',
@@ -78,8 +79,27 @@ export default defineNuxtConfig({
     dataValue: 'theme', // activate data-theme in <html> tag
     classSuffix: '',
   },
+  content: {
+    highlight: {
+      theme: 'nord',
+      preload: ['ts','js','css','java','json','bash','vue']
+    },
+  },
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: false,
+      crossOriginOpenerPolicy: 'unsafe-none',
+      crossOriginResourcePolicy: 'cross-origin',
+      contentSecurityPolicy: {
+        'img-src': ["'self'", 'data:','https://opengraph.githubassets.com','https:'],
+        'base-uri': ["'self'"],
+        'font-src': ["'self'", 'https:', 'data:'],
+        'style-src': ["'self'", 'https:', "'unsafe-inline'"],
+      }
+    }
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,

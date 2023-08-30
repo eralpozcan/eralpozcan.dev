@@ -17,7 +17,7 @@ const handleError = () => clearError({ redirect: '/' })
 					</h2>
 					<p class="text-2xl font-semibold md:text-3xl">{{ $t('error.message') }}</p>
 					<p class="mt-4 mb-8 dark:text-gray-400">{{ $t('error.message2') }}</p>
-					<Button class="btn btn-ghost normal-case text-base" @click="handleError"> {{ $t('error.button') }} </Button>
+					<button class="btn btn-ghost normal-case text-base" @click="handleError"> {{ $t('error.button') }} </button>
 				</div>
 			</div>
 		</section>
