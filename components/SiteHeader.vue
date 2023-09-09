@@ -25,10 +25,10 @@ function ThemeChanger() {
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></li>
-        <li><NuxtLink to="/projects">{{ $t('projects') }}</NuxtLink></li>
-        <li><NuxtLink to="/blog">{{ $t('blog') }}</NuxtLink></li>
-        <li><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/projects">{{ $t('projects') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/blog">{{ $t('blog') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></li>
       </ul>
     </div>
     <div class="navbar-end">
