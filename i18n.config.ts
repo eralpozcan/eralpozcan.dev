@@ -28,6 +28,7 @@ export default defineI18nConfig(() => ({
       job_title: 'Frontend Developer',
       description: "I'm a Full Stack Developer who is passionate about various web technologies. I'm currently working at Protein.Tech as a frontend developer.",
       calendly_text: 'Schedule a meeting',
+      read_more: 'Read More',
     },
     tr: {
       welcome: 'Hoşgeldiniz',
@@ -55,6 +56,7 @@ export default defineI18nConfig(() => ({
       job_title: 'Ön Uç Geliştirici',
       description: "Ben çeşitli web teknolojileri konusunda tutkulu bir Full Stack Developer'ım. Şu anda Protein.Tech'te ön uç geliştiricisi olarak çalışıyorum.",
       calendly_text: 'Bir toplantı ayarla',
+      read_more: 'Devamını Oku',
     }
   }
 }))

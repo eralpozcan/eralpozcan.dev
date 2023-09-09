@@ -5,7 +5,7 @@ cover: sentry.webp
 language: TR
 links: 
   - medium: https://medium.com/@eralpozcan/vue3-ile-sentry-nasil-kullanilir-6e56dc18623d
-  - devto:  
+  - devto:  https://dev.to/eralpozcan/how-to-use-sentry-with-vue-3-2bi2
 tags:
   - blog
 ---
