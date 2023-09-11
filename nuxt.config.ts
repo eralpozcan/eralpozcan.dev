@@ -47,6 +47,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
         { rel: 'manifest', href: '/site.webmanifest' },
+      ],
+      noscript: [
+        { children: 'JavaScript is required' }
       ]
     },
   },
@@ -67,7 +70,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     'nuxt-icon',
-    'nuxt-security',
+    
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-calendly',
@@ -88,19 +91,20 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
-  security: {
-    headers: {
-      crossOriginEmbedderPolicy: false,
-      crossOriginOpenerPolicy: 'unsafe-none',
-      crossOriginResourcePolicy: 'cross-origin',
-      contentSecurityPolicy: {
-        'img-src': ["'self'", 'data:','https://opengraph.githubassets.com','https:'],
-        'base-uri': ["'self'"],
-        'font-src': ["'self'", 'https:', 'data:'],
-        'style-src': ["'self'", 'https:', "'unsafe-inline'"],
-      }
-    }
-  },
+  // security: {
+  //   headers: {
+  //     crossOriginEmbedderPolicy: false,
+  //     crossOriginOpenerPolicy: 'unsafe-none',
+  //     crossOriginResourcePolicy: 'cross-origin',
+  //     contentSecurityPolicy: {
+  //       'img-src': ["'self'", 'data:','https://opengraph.githubassets.com','https:'],
+  //       'base-uri': ["'self'", 'https://media.giphy.com/'],
+  //       'font-src': ["'self'", 'https:', 'data:'],
+  //       'style-src': ["'self'", 'https:', "'unsafe-inline'"],
+  //       'script-src-elem': ["'self'", 'https:', "'unsafe-inline'"],
+  //     },
+  //   }
+  // },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
