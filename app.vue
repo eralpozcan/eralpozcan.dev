@@ -18,7 +18,6 @@ onMounted(() => {
     })
   }
 })
-
 </script>
 <style>
 .page-enter-active,

@@ -6,12 +6,6 @@ language: EN
 links: 
   - medium: https://medium.com/@eralpozcan/how-to-use-sentry-with-vue-3-a8495d482672
   - devto:  https://dev.to/eralpozcan/how-to-use-sentry-with-vue-3-2bi2
-tags:
-  - vue
-  - sentry
-  - performance
-  - monitoring
-  - error
 ---
 
 # How to Use Sentry with Vue 3?
@@ -169,10 +163,10 @@ In fact, while working on this project, I was monitoring the performance metrics
 
 |         Process          | Swiper CSS Imported | Event Duration |   CLS   |   FCP   |   FP    |   LCP   |  TTFB   | Gist |
 |--------------------------|---------------------|----------------|---------|---------|---------|---------|---------|------|
-| **Swiper with UseImage**     | Yes                 | 2.93s          | 0.226   | 733.4ms | 733.4ms | 1.207s  | 80.20ms | [Swiper with UseImage]('https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper1useimage-vue') |
-| **Swiper with Img Tag**      | Yes                 | 2.67s          | 0.392   | 383.4ms | 383.4ms | 1.157s  | 35.60ms | [Swiper with Img Tag]('https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper2img-vue') |
-| **Swiper with Img and Lazy** | Yes                 | 2.06s          | 0.253 | 391ms   | 391ms   | 791.5ms | 18.60ms | [Swiper with Img and Lazy]('https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper3imglazy-vue') |
-| **Swiper with Img and Lazy** | No                  | 1.78s          | 0.218 | 312.9ms | 312.9ms | 693.7ms | 8ms     | [Swiper with Img and Lazy without CSS]('https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper4imglazycss-vue') |
+| **Swiper with UseImage**     | Yes                 | 2.93s          | 0.226   | 733.4ms | 733.4ms | 1.207s  | 80.20ms | [Swiper with UseImage](https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper1useimage-vue) |
+| **Swiper with Img Tag**      | Yes                 | 2.67s          | 0.392   | 383.4ms | 383.4ms | 1.157s  | 35.60ms | [Swiper with Img Tag](https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper2img-vue) |
+| **Swiper with Img and Lazy** | Yes                 | 2.06s          | 0.253 | 391ms   | 391ms   | 791.5ms | 18.60ms | [Swiper with Img and Lazy](https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper3imglazy-vue) |
+| **Swiper with Img and Lazy** | No                  | 1.78s          | 0.218 | 312.9ms | 312.9ms | 693.7ms | 8ms     | [Swiper with Img and Lazy without CSS](https://gist.github.com/Eralpozcan/ae1f7d40b16b8420d4ab3f0ac6b6b430#file-swiper4imglazycss-vue) |
 
 
 

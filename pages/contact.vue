@@ -1,5 +1,26 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
+
+useSeoMeta({
+  title: 'Eralp Ozcan Contact',
+  description: 'Contact Me',
+  ogType: 'website',
+  ogSiteName: 'Eralp Ozcan',
+  ogTitle: 'Eralp Ozcan',
+  ogDescription: 'Contact Me',
+  ogUrl: 'https://eralpozcan.dev/contact',
+  ogImage: 'https://eralpozcan.dev/og-image.png',
+  ogLocale: 'en_US',
+  ogLocaleAlternate: 'tr_TR',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Eralp Ozcan',
+  twitterDescription: 'Contact Me',
+  twitterImage: 'https://eralpozcan.dev/og-image.png',
+  twitterSite: '@eralpozcan',
+})
+
+
+
 </script>
 
 <template>

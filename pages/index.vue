@@ -11,3 +11,24 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Eralp Ozcan',
+  description: 'Eralp Ozcan',
+  ogType: 'website',
+  ogSiteName: 'Eralp Ozcan',
+  ogTitle: 'Eralp Ozcan',
+  ogDescription: 'Eralp Ozcan Personal Website',
+  ogUrl: 'https://eralpozcan.dev',
+  ogImage: 'https://eralpozcan.dev/og-image.png',
+  ogLocale: 'en_US',
+  ogLocaleAlternate: 'tr_TR',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Eralp Ozcan',
+  twitterDescription: 'Eralp Ozcan Personal Website',
+  twitterImage: 'https://eralpozcan.dev/og-image.png',
+  twitterSite: '@eralpozcan',
+})
+
+</script>

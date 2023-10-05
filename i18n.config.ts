@@ -23,6 +23,9 @@ export default defineI18nConfig(() => ({
         message2: 'But dont worry, you can find plenty of other things on our homepage.',
         button: 'Go to homepage',
       },
+      blogs: {
+        title: 'Blog Posts',
+      },
       cv_download: 'Download CV',
       hello_everyone: '👋🏻 Hello Everyone, I am Eralp Özcan!',
       job_title: 'Frontend Developer',
@@ -50,6 +53,9 @@ export default defineI18nConfig(() => ({
         message: 'Bir şeyler yanlış gitti.',
         message2: 'Ama merak etmeyin, ana sayfamızda daha pek çok şey bulabilirsiniz.',
         button: 'Ana sayfaya git',
+      },
+      blogs: {
+        title: 'Blog Gönderileri',
       },
       cv_download: 'CV İndir',
       hello_everyone: '👋🏻 Merhaba,Ben Eralp Özcan!',

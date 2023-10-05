@@ -40,9 +40,7 @@
     "nuxt-icon": "^0.4.2",
     "nuxt-security": "^0.14.4",
     "nuxt-simple-robots": "^3.1.1",
-    "nuxt-simple-sitemap": "^3.1.7"
-  },
-  "dependencies": {
-    "graphql-tag": "^2.12.6"
+    "nuxt-simple-sitemap": "^3.1.7",
+    "sitemap": "^7.1.1"
   }
 }
