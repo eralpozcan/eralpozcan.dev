@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find()
   const sitemap = new SitemapStream({
-    hostname: 'https://localhost:3000'
+    hostname: 'https://eralpozcan.dev'
   })
 
   for (const doc of docs) {
