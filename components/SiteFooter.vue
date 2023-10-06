@@ -15,7 +15,7 @@ const links = [
       <p>Copyright © 2023</p>
     </div>
     <div class="flex flex-row">
-      <!-- <p class="link link-hover"><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></p> -->
+      <p class="link link-hover"><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></p>
       <p class="link link-hover"><NuxtLink to="/projects">{{ $t('projects') }}</NuxtLink></p>
       <p class="link link-hover"><NuxtLink to="/blog">{{ $t('blog') }}</NuxtLink></p>
       <p class="link link-hover"><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></p>

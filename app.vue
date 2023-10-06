@@ -29,4 +29,8 @@ onMounted(() => {
   opacity: 0;
   filter: blur(1rem);
 }
+
+.calendly-badge-widget {
+  bottom: 50px;
+}
 </style>

@@ -122,6 +122,6 @@ export default defineNuxtConfig({
   calendly: {
     isEnabled: true,
     loadWidgetCSS: true,
-    loadWidgetCloseIconSvg: true,
+    loadWidgetCloseIconSvg: false,
   },
 })
