@@ -55,7 +55,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     'nuxt-icon',
-    
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-calendly',
