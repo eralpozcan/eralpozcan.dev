@@ -43,7 +43,7 @@ const query = gql`
 
 const { data } = await useAsyncQuery(query)
 const repositories = ref(data.value?.viewer.repositories.nodes)
-const filteredRepositories = repositories.value.filter((repository) => repository.isInOrganization === false);
+const filteredRepositories = repositories.value?.filter((repository) => repository.isInOrganization === false);
 
 useHead(
   {
