@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
-
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
@@ -80,20 +78,6 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
-  // security: {
-  //   headers: {
-  //     crossOriginEmbedderPolicy: false,
-  //     crossOriginOpenerPolicy: 'unsafe-none',
-  //     crossOriginResourcePolicy: 'cross-origin',
-  //     contentSecurityPolicy: {
-  //       'img-src': ["'self'", 'data:','https://opengraph.githubassets.com','https:'],
-  //       'base-uri': ["'self'", 'https://media.giphy.com/'],
-  //       'font-src': ["'self'", 'https:', 'data:'],
-  //       'style-src': ["'self'", 'https:', "'unsafe-inline'"],
-  //       'script-src-elem': ["'self'", 'https:', "'unsafe-inline'"],
-  //     },
-  //   }
-  // },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },

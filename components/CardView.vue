@@ -1,5 +1,5 @@
 <template>
-  <div class="card w-96 h-96 bg-base-100 shadow-xl mx-8 my-4">
+  <div class="card lg:w-72 lg:h-72 xl:w-96 2xl:w-96 xl:h-96 2xl:h-96 bg-base-100 shadow-xl mx-8 my-4">
     <figure><nuxt-img :src="data.openGraphImageUrl" :alt="data.name + 'preview image'" loading="lazy" width="400" height="190" /></figure>
     <div class="card-body">
       <h2 class="card-title">

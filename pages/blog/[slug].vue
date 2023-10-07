@@ -10,7 +10,6 @@ const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
 
 const title: string = article.value?.title || ''
 const description: string = article.value?.description || ''
-const image: string = article.value?.image || ''
 const ogImage: string = article.value?.ogImage || ''
 
 useHead({
