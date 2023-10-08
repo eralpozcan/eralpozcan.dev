@@ -1,13 +1,10 @@
 name: Deploy to FTP
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
-env:
-  NUXT_CONTACT_FORM_API: ${{ secrets.NUXT_CONTACT_FORM_API }}
-  NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
-  GQL_GITHUB_HOST: ${{ secrets.GQL_GITHUB_HOST }}
-  NUXT_CALENDLY_URL: ${{ secrets.NUXT_CALENDLY_URL }}
-  
 jobs:
   web-deploy:
     name: Deploy
@@ -21,11 +18,22 @@ jobs:
       with:
         node-version: '18.17'
       
-    - name: Build
-      env:
-        CI: false
+    - name: Install dependencies
       run: |
         npm install
+
+    - name: Load .env file
+      run: |
+        echo "NUXT_CONTACT_FORM_API=${{secrets.NUXT_CONTACT_FORM_API}}" > .env
+        echo "NUXT_PUBLIC_SITE_URL=${{secrets.NUXT_PUBLIC_SITE_URL}}" >> .env
+        echo "NUXT_GITHUB_TOKEN=${{secrets.NUXT_GITHUB_TOKEN}}" >> .env
+        echo "GQL_GITHUB_HOST=${{secrets.GQL_GITHUB_HOST}}" >> .env
+        echo "NUXT_CALENDLY_ENABLED=${{secrets.NUXT_CALENDLY_ENABLED}}" >> .env
+        echo "NUXT_CALENDLY_URL=${{secrets.NUXT_CALENDLY_URL}}" >> .env
+        echo "NUXT_PUBLIC_GA_ID=${{secrets.NUXT_PUBLIC_GA_ID}}" >> .env
+        
+    - name: Build
+      run: |
         npm run generate
     
     - name: Sync files
