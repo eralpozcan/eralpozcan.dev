@@ -20,7 +20,6 @@ jobs:
         NUXT_CONTACT_FORM_API: ${{ secrets.NUXT_CONTACT_FORM_API }}
         NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }} 
         GQL_GITHUB_HOST: ${{ secrets.GQL_GITHUB_HOST }} 
-        NUXT_CONTACT_FORM_API: ${{ secrets.NUXT_CONTACT_FORM_API }} 
         NUXT_CALENDLY_URL: ${{ secrets.NUXT_CALENDLY_URL }} 
       run: |
         npm install
