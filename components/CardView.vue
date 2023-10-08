@@ -8,7 +8,7 @@
       </h2>
       <p>{{ data.description }}</p>
       <div class="card-actions justify-center" >
-        <div class="badge badge-outline" :style="{color:usedLanguages.color}" v-for="usedLanguages in data.languages.nodes"> 
+        <div class="badge badge-outline" :style="{color:usedLanguages.color}" v-for="usedLanguages in data.languages.nodes" :key="usedLanguages.name"> 
           {{ usedLanguages.name }}</div> 
       </div>
     </div>
@@ -18,7 +18,10 @@
 <script setup>
 
 defineProps({
-  data: Object
+  data: {
+    type: Object,
+    default: () => ({}),
+  },
 })
 
 function compareDateWithCurrent(dateString) {
@@ -30,9 +33,3 @@ function compareDateWithCurrent(dateString) {
 //   return `devicon:${iconName.toLowerCase()}`
 // }
 </script>
-
-
-
-<style scoped>
-
-</style>

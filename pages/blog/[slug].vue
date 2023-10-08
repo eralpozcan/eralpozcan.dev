@@ -8,9 +8,9 @@ const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
     .findOne(),
 )
 
-const title: string = article.value?.title || ''
-const description: string = article.value?.description || ''
-const ogImage: string = article.value?.ogImage || ''
+const title: string = article.value?.title ?? ''
+const description: string = article.value?.description ?? ''
+const ogImage: string = article.value?.ogImage ?? ''
 
 useHead({
   title: title,

@@ -1,5 +1,10 @@
 <script setup>
-const props = defineProps(['posts'])
+const props = defineProps({
+  posts: {
+    type: Array,
+    required: true,
+  },
+})
 </script>
 
 <template>
@@ -13,7 +18,7 @@ const props = defineProps(['posts'])
       <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
       <p class="text-gray-700 mb-4">{{ post.description }}</p>
       <div class="flex items-center"> 
-        <template v-for="links in post.links">
+        <template v-for="(links, index) in post.links" :key="index">
           <NuxtLink v-if="links.medium" :to="links.medium">
             <Icon name="fa-brands:medium" size="1.5rem" class="bg-base-200" :alt="post.title"/>
           </NuxtLink>
@@ -27,7 +32,6 @@ const props = defineProps(['posts'])
         class="btn btn-ghost normal-case text-base py-2 px-2 mb-5 rounded float-right"> {{ $t('read_more')  }}
         </NuxtLink>
       </div>
-
     </div>
   </div>
 </template>

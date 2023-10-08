@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const props = defineProps({
-  error: Object
+  error: {
+		type: Object,
+		default: () => ({}),
+	},
 })
 const error = useError()
 const handleError = () => clearError({ redirect: '/' })
