@@ -92,7 +92,7 @@ export default defineNuxtConfig({
         httpEndpoint: 'https://api.github.com/graphql',
         httpLinkOptions: {
           headers: {
-            authorization: `Bearer ${process.env.NUXT_GITHUB_TOKEN}`,
+            authorization: `${process.env.NUXT_GITHUB_TOKEN}`,
           },
         },
       }
