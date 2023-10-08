@@ -1,6 +1,13 @@
 name: Deploy to FTP
 
 on: push
+
+env:
+  NUXT_CONTACT_FORM_API: ${{ secrets.NUXT_CONTACT_FORM_API }}
+  NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
+  GQL_GITHUB_HOST: ${{ secrets.GQL_GITHUB_HOST }}
+  NUXT_CALENDLY_URL: ${{ secrets.NUXT_CALENDLY_URL }}
+  
 jobs:
   web-deploy:
     name: Deploy
@@ -13,16 +20,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18.17'
-    - name: Read a variable
-      run: echo "My APP_ID value is ${{ secrets.NUXT_CONTACT_FORM_API }}"
       
     - name: Build
       env:
         CI: false
-        NUXT_CONTACT_FORM_API: ${{ secrets.NUXT_CONTACT_FORM_API }}
-        NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
-        GQL_GITHUB_HOST: ${{ secrets.GQL_GITHUB_HOST }}
-        NUXT_CALENDLY_URL: ${{ secrets.NUXT_CALENDLY_URL }}
       run: |
         npm install
         npm run generate
