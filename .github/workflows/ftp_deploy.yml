@@ -13,6 +13,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18.17'
+    - name: Read a variable
+      run: echo "My APP_ID value is ${{ secrets.NUXT_GITHUB_TOKEN }}"
       
     - name: Build
       env:
