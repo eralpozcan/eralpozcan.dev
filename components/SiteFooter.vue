@@ -21,7 +21,7 @@ const links = [
       <p class="link link-hover"><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></p>
     </div>
     <div class="flex flex-row flex-nowrap">
-      <a v-for="link in links" :key="link.name" :href="link.href" target="_blank" hreflang="en" type="link" :name="link.name" :aria-label="link.name">
+      <a v-for="link in links" :key="link.name" :href="link.href" target="_blank" rel="noopener noreferrer" hreflang="en" type="link" :name="link.name" :aria-label="link.name">
         <Icon :name="link.icon" size="1.5rem" class="bg-base-200" :alt="link.name"/>
       </a>
     </div>

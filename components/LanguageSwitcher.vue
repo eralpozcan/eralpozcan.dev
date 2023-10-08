@@ -3,7 +3,7 @@ const { locale } = useI18n()
 const isDropdownOpen = ref<boolean>(false);
 const target = ref<HTMLElement | null>(null);
 
-onClickOutside(target, (event: MouseEvent) => {
+onClickOutside(target, () => {
   isDropdownOpen.value = false;
 });
 
