@@ -14,7 +14,7 @@ jobs:
       with:
         node-version: '18.17'
     - name: Read a variable
-      run: echo "My APP_ID value is ${{ vars.NUXT_CONTACT_FORM_API }}"
+      run: echo "My APP_ID value is ${{ secrets.NUXT_CONTACT_FORM_API }}"
       
     - name: Build
       env:
