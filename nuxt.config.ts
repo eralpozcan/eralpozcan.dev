@@ -78,10 +78,16 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
   sitemap: {
+    hostname: process.env.NUXT_PUBLIC_SITE_URL,
     autoAlternativeLangPrefixes: true,
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
     xsl: false
