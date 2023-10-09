@@ -13,7 +13,7 @@ const description: string = article.value?.description ?? ''
 const ogImage: string = article.value?.ogImage ?? ''
 
 useHead({
-  title: title,
+  title,
   meta: [
     { name: 'description', content: description },
     { property: 'og:site_name', content: 'Eralp Ozcan Blog'},
