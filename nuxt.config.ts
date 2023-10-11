@@ -85,10 +85,13 @@ export default defineNuxtConfig({
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: 'Eralp Ozcan',
+    description: 'Eralp Ozcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.',
+    indexable: process.env.NODE_ENV === 'production',
+    defaultLocale: 'en',
   },
   sitemap: {
-    hostname: process.env.NUXT_PUBLIC_SITE_URL,
-    autoAlternativeLangPrefixes: true,
+    enabled: true,
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
     xsl: false
   },
