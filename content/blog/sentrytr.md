@@ -6,6 +6,10 @@ language: TR
 links: 
   - medium: https://medium.com/@eralpozcan/vue3-ile-sentry-nasil-kullanilir-6e56dc18623d
   - devto:  https://dev.to/eralpozcan/how-to-use-sentry-with-vue-3-2bi2
+sitemap:
+  lastmod: 2023-06-26
+  changefreq: monthly
+  priority: 0.8
 ---
 
 # Vue3 ile Sentry Nasıl Kullanılır?

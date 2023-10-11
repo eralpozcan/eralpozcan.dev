@@ -44,6 +44,14 @@ export default defineNuxtConfig({
     },
     githubToken: process.env.NUXT_GITHUB_TOKEN,
   },
+  routeRules: {
+    '/': { sitemap: { changefreq: 'daily', priority: 1 } }, // 'home' route
+    '/about': { sitemap: { changefreq: 'weekly', priority: 0.5 } },
+    '/contact': { sitemap: { changefreq: 'weekly', priority: 0.3 } },
+    '/projects': { sitemap: { changefreq: 'daily', priority: 0.7 } },
+    '/blog': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
+    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
+  },
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/tailwindcss',
@@ -93,7 +101,8 @@ export default defineNuxtConfig({
   sitemap: {
     enabled: true,
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
-    xsl: false
+    xsl: false,
+    strictNuxtContentPaths: true,
   },
   apollo: {
     clients: {

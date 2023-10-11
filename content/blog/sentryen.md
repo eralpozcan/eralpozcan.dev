@@ -6,6 +6,10 @@ language: EN
 links: 
   - medium: https://medium.com/@eralpozcan/how-to-use-sentry-with-vue-3-a8495d482672
   - devto:  https://dev.to/eralpozcan/how-to-use-sentry-with-vue-3-2bi2
+sitemap:
+  lastmod: 2023-06-26
+  changefreq: monthly
+  priority: 0.8
 ---
 
 # How to Use Sentry with Vue 3?
