@@ -17,10 +17,10 @@ export default defineNuxtConfig({
       },
       meta: [
         { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         { name: 'googlebot', content: 'index, follow' },
         { name: 'author', content: 'Eralp Ozcan' },
         { name: 'language', content: 'English' },
-        { name: 'viewport', content: 'width=device-width,initial-scale=1' },
         { hid: 'robots', name: 'robots', content: 'index, follow'},
         { name: 'application-name', content: 'Eralp Ozcan' },
       ],
@@ -59,13 +59,32 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxt/image',
+    '@nuxtjs/web-vitals',
     '@vueuse/nuxt',
+    'nuxt-capo',
+    'nuxt-calendly',
     'nuxt-icon',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
-    'nuxt-calendly',
     'nuxt-gtag'
   ],
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: 'https://api.github.com/graphql',
+        httpLinkOptions: {
+          headers: {
+            authorization: `Bearer ${process.env.NUXT_GITHUB_TOKEN}`,
+          },
+        },
+      }
+    },
+  },
+  calendly: {
+    isEnabled: true,
+    loadWidgetCSS: true,
+    loadWidgetCloseIconSvg: false,
+  },
   colorMode: {
     preference: 'system', // default theme
     fallback: 'light', // fallback theme
@@ -104,25 +123,13 @@ export default defineNuxtConfig({
     xsl: false,
     strictNuxtContentPaths: true,
   },
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: 'https://api.github.com/graphql',
-        httpLinkOptions: {
-          headers: {
-            authorization: `Bearer ${process.env.NUXT_GITHUB_TOKEN}`,
-          },
-        },
-      }
-    },
-  },
   gtag: {
     id: process.env.NUXT_PUBLIC_GA_ID,
     loadingStrategy: 'async',
   },
-  calendly: {
-    isEnabled: true,
-    loadWidgetCSS: true,
-    loadWidgetCloseIconSvg: false,
-  },
+  webVitals: {
+    ga: {
+      id: process.env.NUXT_PUBLIC_GA_ID,
+    },
+  }
 })
