@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   ssr: false,
   experimental: {
     payloadExtraction: false,
@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Eralp Özcan' },
         { name: 'language', content: 'English' },
         { hid: 'robots', name: 'robots', content: 'index, follow'},
-        { name: 'application-name', content: 'Eralp Ozcan' },
+        { name: 'application-name', content: 'Eralp Özcan' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

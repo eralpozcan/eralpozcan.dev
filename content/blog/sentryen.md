@@ -2,6 +2,7 @@
 title: How to Use Sentry with Vue 3?
 date: 2023-06-26
 cover: sentry.webp
+ogImage: /assets/images/blog/sentry.webp
 language: EN
 links: 
   - medium: https://medium.com/@eralpozcan/how-to-use-sentry-with-vue-3-a8495d482672

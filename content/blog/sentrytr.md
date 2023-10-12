@@ -2,6 +2,7 @@
 title: Vue3 ile Sentry Nasıl Kullanılır?
 date: 2023-06-26
 cover: sentry.webp
+ogImage: /assets/images/blog/sentry.webp
 language: TR
 links: 
   - medium: https://medium.com/@eralpozcan/vue3-ile-sentry-nasil-kullanilir-6e56dc18623d

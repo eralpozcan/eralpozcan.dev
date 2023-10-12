@@ -16,7 +16,7 @@ useHead({
   title,
   meta: [
     { name: 'description', content: description },
-    { property: 'og:site_name', content: 'Eralp Ozcan Blog'},
+    { property: 'og:site_name', content: 'Eralp Özcan - Blog'},
     { property: 'og:url', content: 'https://eralpozcan.dev'},
     { property: 'og:title', content: title},
     { property: 'og:description', content: description},
@@ -30,7 +30,7 @@ useHead({
     { property: 'twitter:url', content: 'https://eralpozcan.dev'},
   ],
   link: [
-    { rel: 'canonical', href: `https://eralpozcan.dev/${path}`},
+    { rel: 'canonical', href: `https://eralpozcan.dev/blog/`},
     { rel: 'icon', href: '/favicon.ico'},
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png'},
     { rel: 'manifest', href: '/site.webmanifest'},
