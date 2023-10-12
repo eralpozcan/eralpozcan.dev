@@ -2,18 +2,18 @@
 const config = useRuntimeConfig()
 
 useSeoMeta({
-  title: 'Eralp Ozcan Contact',
+  title: 'Eralp Özcan Contact',
   description: 'Contact Me',
   ogType: 'website',
-  ogSiteName: 'Eralp Ozcan',
-  ogTitle: 'Eralp Ozcan',
+  ogSiteName: 'Eralp Özcan',
+  ogTitle: 'Eralp Özcan',
   ogDescription: 'Contact Me',
   ogUrl: 'https://eralpozcan.dev/contact',
   ogImage: 'https://eralpozcan.dev/og-image.png',
   ogLocale: 'en_US',
   ogLocaleAlternate: 'tr_TR',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Eralp Ozcan',
+  twitterTitle: 'Eralp Özcan',
   twitterDescription: 'Contact Me',
   twitterImage: 'https://eralpozcan.dev/og-image.png',
   twitterSite: '@eralpozcan',

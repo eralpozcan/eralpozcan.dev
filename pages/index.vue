@@ -13,19 +13,19 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Eralp Ozcan',
-  description: 'Eralp Ozcan',
+  title: 'Eralp Özcan',
+  description: 'Eralp Özcan',
   ogType: 'website',
-  ogSiteName: 'Eralp Ozcan',
-  ogTitle: 'Eralp Ozcan',
-  ogDescription: 'Eralp Ozcan Personal Website',
+  ogSiteName: 'Eralp Özcan',
+  ogTitle: 'Eralp Özcan',
+  ogDescription: 'Eralp Özcan Personal Website',
   ogUrl: 'https://eralpozcan.dev',
   ogImage: 'https://eralpozcan.dev/og-image.png',
   ogLocale: 'en_US',
   ogLocaleAlternate: 'tr_TR',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Eralp Ozcan',
-  twitterDescription: 'Eralp Ozcan Personal Website',
+  twitterTitle: 'Eralp Özcan',
+  twitterDescription: 'Eralp Özcan Personal Website',
   twitterImage: 'https://eralpozcan.dev/og-image.png',
   twitterSite: '@eralpozcan',
 })

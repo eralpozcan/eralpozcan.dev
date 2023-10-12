@@ -47,19 +47,19 @@ const filteredRepositories = repositories.value?.filter((repository) => reposito
 
 useHead(
   {
-    title: 'Eralp Ozcan Projects',
+    title: 'Eralp Özcan Projects',
     meta: [
-      { name: 'description', content: 'Eralp Ozcan Projects'},
-      { property: 'og:site_name', content: 'Eralp Ozcan' },
+      { name: 'description', content: 'Eralp Özcan Projects'},
+      { property: 'og:site_name', content: 'Eralp Özcan' },
       { property: 'og:url', content: 'https://eralpozcan.dev' },
-      { property: 'og:title', content: 'Eralp Ozcan Projects' },
-      { property: 'og:description', content: 'Eralp Ozcan Projects' },
+      { property: 'og:title', content: 'Eralp Özcan Projects' },
+      { property: 'og:description', content: 'Eralp Özcan Projects' },
       { property: 'og:image', content: 'https://eralpozcan.dev/og-image.png' },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:site', content: '@eralpozcan' },
       { property: 'twitter:creator', content: '@eralpozcan' },
-      { property: 'twitter:title', content: 'Eralp Ozcan Projects' },
-      { property: 'twitter:description', content: 'Eralp Ozcan Projects' },
+      { property: 'twitter:title', content: 'Eralp Özcan Projects' },
+      { property: 'twitter:description', content: 'Eralp Özcan Projects' },
       { property: 'twitter:image', content: 'https://eralpozcan.dev/og-image.png' },
       { property: 'twitter:url', content: 'https://eralpozcan.dev/projects' },
     ],
