@@ -30,7 +30,7 @@ useHead({
     { property: 'twitter:url', content: 'https://eralpozcan.dev'},
   ],
   link: [
-    { rel: 'canonical', href: `https://eralpozcan.dev/blog/`},
+    { rel: 'canonical', href: 'https://eralpozcan.dev/blog/'},
     { rel: 'icon', href: '/favicon.ico'},
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png'},
     { rel: 'manifest', href: '/site.webmanifest'},
