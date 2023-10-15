@@ -18,14 +18,6 @@ jobs:
       with:
         node-version: '18.17'
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    - name: Install DeepSource CLI
-      run: pip install deepsource
-
     - name: Install infisical-cli
       shell: bash
       run: curl -1sLf  'https://dl.cloudsmith.io/public/infisical/infisical-cli/setup.deb.sh' | sudo -E bash
@@ -34,11 +26,6 @@ jobs:
       shell: bash
       run: | 
         sudo apt-get update && sudo apt-get install -y infisical
-
-    - name: Run DeepSource Analysis
-      run: | 
-        deepsource start
-        deepsource check
 
     - name: Install dependencies
       run: |
