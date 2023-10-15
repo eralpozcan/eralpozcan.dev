@@ -27,6 +27,22 @@ jobs:
       run: | 
         sudo apt-get update && sudo apt-get install -y infisical
 
+    - name: Install DeepSource CLI
+      run: |
+        npm install -g deepsource
+        deepsource configure github-action
+
+    - name: Run DeepSource Quality Gate
+      env:
+        DEEPSOURCE_TOKEN: ${{ secrets.DEEPSOURCE_TOKEN }}
+      run: |
+        deepsource check
+        deepsource_exit_code=$?
+        if [ $deepsource_exit_code -ne 0 ]; then
+          echo "DeepSource check failed with exit code $deepsource_exit_code."
+          exit 1
+        fi
+
     - name: Install dependencies
       run: |
         npm install
