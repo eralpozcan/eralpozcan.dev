@@ -35,11 +35,6 @@ jobs:
       run: | 
         sudo apt-get update && sudo apt-get install -y infisical
 
-    - name: Install DeepSource CLI
-      run: |
-        npm install -g deepsource
-        deepsource configure github-action
-
     - name: Run DeepSource Analysis
       run: | 
         deepsource start
