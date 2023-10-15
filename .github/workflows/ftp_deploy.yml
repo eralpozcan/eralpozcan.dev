@@ -27,17 +27,13 @@ jobs:
       run: | 
         sudo apt-get update && sudo apt-get install -y infisical
 
-    - name: Login to Infisical
-      run: |
-        infisical login --token ${{secrets.INFISICAL_TOKEN}}
-      
     - name: Install dependencies
       run: |
         npm install
        
     - name: Build
       run: |
-        infisical run --env=prod --path=/ -- npm run generate
+        infisical run --token ${{secrets.INFISICAL_TOKEN}} --env=prod --path=/ -- npm run generate
     
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
