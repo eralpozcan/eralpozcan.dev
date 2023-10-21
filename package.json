@@ -19,7 +19,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "clean": "nuxt clean"
+    "clean": "nuxt cleanup"
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.5",
