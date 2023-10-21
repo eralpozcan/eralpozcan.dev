@@ -50,15 +50,15 @@ export default defineNuxtConfig({
     '/contact': { sitemap: { changefreq: 'weekly', priority: 0.3 } },
     '/projects': { sitemap: { changefreq: 'daily', priority: 0.7 } },
     '/blog': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
-    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
+    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 }, redirect: '/blog' },
   },
   modules: [
+    '@nuxt/image',
+    '@nuxt/content',
     '@nuxtjs/apollo',
     '@nuxtjs/tailwindcss',
-    '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
-    '@nuxt/image',
     '@nuxtjs/web-vitals',
     '@vueuse/nuxt',
     'nuxt-capo',
@@ -111,7 +111,7 @@ export default defineNuxtConfig({
     }
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
+    url: [ process.env.NUXT_PUBLIC_SITE_URL ],
     name: 'Eralp Özcan',
     description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.',
     indexable: process.env.NODE_ENV === 'production',
