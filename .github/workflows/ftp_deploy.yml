@@ -37,7 +37,11 @@ jobs:
       run: |
         npm run generate
     
-    - name: Deploy to FTP
-      run: |
-        apt-get -y install lftp
-        lftp -e "set ftp:ssl-allow no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} sftp://${{ secrets.FTP_SERVER }}; mirror -R dist/ /public_html/; bye"
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{secrets.FTP_SERVER}}
+        username: ${{secrets.FTP_USERNAME}}
+        password: ${{secrets.FTP_PASSWORD}}
+        local-dir: ./dist/
+        server-dir: /public_html/
