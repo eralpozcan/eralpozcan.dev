@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     '/contact': { sitemap: { changefreq: 'weekly', priority: 0.3 } },
     '/projects': { sitemap: { changefreq: 'daily', priority: 0.7 } },
     '/blog': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
-    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 }, redirect: '/blog' },
+    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
   },
   modules: [
     '@nuxt/image',
