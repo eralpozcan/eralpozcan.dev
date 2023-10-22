@@ -16,7 +16,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18.4.0'
+        node-version: '18'
       
     - name: Install dependencies
       run: |
@@ -38,7 +38,7 @@ jobs:
         npm run generate
     
     - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0
       with:
         server: ${{secrets.FTP_SERVER}}
         username: ${{secrets.FTP_USERNAME}}
