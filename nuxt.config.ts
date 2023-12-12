@@ -6,10 +6,6 @@ export default defineNuxtConfig({
     payloadExtraction: false,
   },
   app: {
-    pageTransition: {
-      name: 'page',
-      mode: 'out-in',
-    },
     head: {
       title: 'Eralp Özcan',
       htmlAttrs: {
@@ -23,6 +19,7 @@ export default defineNuxtConfig({
         { name: 'language', content: 'English' },
         { hid: 'robots', name: 'robots', content: 'index, follow'},
         { name: 'application-name', content: 'Eralp Özcan' },
+        { name: 'description', content: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -43,14 +40,6 @@ export default defineNuxtConfig({
       contactFormApi: process.env.NUXT_CONTACT_FORM_API
     },
     githubToken: process.env.NUXT_GITHUB_TOKEN,
-  },
-  routeRules: {
-    '/': { sitemap: { changefreq: 'daily', priority: 1 } }, // 'home' route
-    '/about': { sitemap: { changefreq: 'weekly', priority: 0.5 } },
-    '/contact': { sitemap: { changefreq: 'weekly', priority: 0.3 } },
-    '/projects': { sitemap: { changefreq: 'daily', priority: 0.7 } },
-    '/blog': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
-    '/blog/:slug': { sitemap: { changefreq: 'weekly', priority: 0.8 } },
   },
   modules: [
     '@nuxt/image',
@@ -117,9 +106,12 @@ export default defineNuxtConfig({
     description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.',
     indexable: process.env.NUXT_NODE_ENV === 'production',
     defaultLocale: 'en',
+    identity: {
+      type: 'Person',
+    },
+    debug: process.env.NUXT_NODE_ENV !== 'production',
   },
   sitemap: {
-    hostname: process.env.NUXT_PUBLIC_SITE_URL,
     enabled: true,
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
     xsl: false,
@@ -131,12 +123,11 @@ export default defineNuxtConfig({
   },
   webVitals: {
     ga: {
-      id: process.env.NUXT_PUBLIC_GA_ID,
+      id: `${process.env.NUXT_PUBLIC_GA_ID}`,
     },
   },
   googleAdsense: {
     id: process.env.NUXT_PUBLIC_ADSENSE_ID,
     pageLevelAds: true,
-    test: true
   },
 })

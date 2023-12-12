@@ -15,29 +15,29 @@ function ThemeChanger() {
           </svg>
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></li>
-          <li><NuxtLink to="/projects">{{ $t('projects') }}</NuxtLink></li>
-          <li><NuxtLink to="/blog">{{ $t('blog') }}</NuxtLink></li>
-          <li><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></li>
+          <li><NuxtLink to="/about-me" :replace="true">{{ $t('about_us') }}</NuxtLink></li>
+          <li><NuxtLink to="/projects" :replace="true">{{ $t('projects') }}</NuxtLink></li>
+          <li><NuxtLink to="/blog" :replace="true">{{ $t('blog') }}</NuxtLink></li>
+          <li><NuxtLink to="/contact" :replace="true">{{ $t('contact_us') }}</NuxtLink></li>
         </ul>
       </div>
       <p class="btn btn-ghost normal-case text-xl"><NuxtLink to="/">Eralp Özcan</NuxtLink></p>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li class="mx-px"><NuxtLink to="/about-me">{{ $t('about_us') }}</NuxtLink></li>
-        <li class="mx-px"><NuxtLink to="/projects">{{ $t('projects') }}</NuxtLink></li>
-        <li class="mx-px"><NuxtLink to="/blog">{{ $t('blog') }}</NuxtLink></li>
-        <li class="mx-px"><NuxtLink to="/contact">{{ $t('contact_us') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/about-me" :replace="true">{{ $t('about_us') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/projects" :replace="true">{{ $t('projects') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/blog" :replace="true">{{ $t('blog') }}</NuxtLink></li>
+        <li class="mx-px"><NuxtLink to="/contact" :replace="true">{{ $t('contact_us') }}</NuxtLink></li>
       </ul>
     </div>
     <div class="navbar-end">
       <LanguageSwitcher />
-      <Button class="btn btn-ghost normal-case text-base" @click="ThemeChanger()" aria-label="Theme Change Icon">
+      <button class="btn btn-ghost normal-case text-base" @click="ThemeChanger()" aria-label="Theme Change Icon">
         <Icon v-if="colorMode.preference === 'dark' || colorMode.value === 'dark'" name="heroicons-solid:sun" size="1.4rem"
           class="fill-current"/>
         <Icon v-else-if="colorMode.preference === 'light' || colorMode.value === 'light'" name="heroicons-solid:moon" size="1.4rem" class="fill-current"/>
-      </Button>
+      </button>
     </div>
   </nav>
 </template>

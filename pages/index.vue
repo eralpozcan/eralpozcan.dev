@@ -14,7 +14,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Eralp Özcan',
-  description: 'Eralp Özcan',
+  description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.',
   ogType: 'website',
   ogSiteName: 'Eralp Özcan',
   ogTitle: 'Eralp Özcan',

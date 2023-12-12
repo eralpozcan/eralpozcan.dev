@@ -1,7 +1,9 @@
 <template>
-  <SiteHeader />
-  <NuxtPage  />
-  <SiteFooter />
+  <div>
+    <SiteHeader />
+      <NuxtPage :keepalive="true" />
+    <SiteFooter />
+  </div>
 </template>
 
 
