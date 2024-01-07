@@ -32,6 +32,7 @@ jobs:
         echo "NUXT_CALENDLY_URL=${{secrets.NUXT_CALENDLY_URL}}" >> .env
         echo "NUXT_PUBLIC_GA_ID=${{secrets.NUXT_PUBLIC_GA_ID}}" >> .env
         echo "NUXT_NODE_ENV=${{secrets.NUXT_NODE_ENV}}" >> .env
+        echo "NUXT_PUBLIC_IMAGEKIT_BASE_URL=${{secrets.NUXT_PUBLIC_IMAGEKIT_BASE_URL}}" >> .env
         
     - name: Build
       run: |
