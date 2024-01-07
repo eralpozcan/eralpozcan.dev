@@ -74,14 +74,14 @@ This is a simple personal blog app built with Nuxt3, Nuxt Content and TailwindCS
 
 ### 📷 **Screenshots**
 
-<img src="./docs/images/mainpage.png" alt="Main Page Screenshot" width="800" height="300" />
+<img src="./docs/images/mainpage.png" alt="Main Page Screenshot" />
 
 <details>
   <summary>Show Other Preview Screenshots</summary>
-  <img src="./docs/images/aboutpage.png" alt="About Page Screenshot" width="800" height="300" />
-  <img src="./docs/images/projectspage.png" alt="Projects Page Screenshot" width="800" height="300" />
-  <img src="./docs/images/blogpage.png" alt="Blog Page Screenshot" width="800" height="300" />
-  <img src="./docs/images/contactpage.png" alt="Contact Page Screenshot" width="800" height="300" />
+  <img src="./docs/images/aboutpage.png" alt="About Page Screenshot" />
+  <img src="./docs/images/projectspage.png" alt="Projects Page Screenshot" />
+  <img src="./docs/images/blogpage.png" alt="Blog Page Screenshot"/>
+  <img src="./docs/images/contactpage.png" alt="Contact Page Screenshot" />
 </details>
 
 
