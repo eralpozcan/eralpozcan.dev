@@ -49,7 +49,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxtjs/web-vitals',
-    '@nuxtjs/google-adsense',
     '@vueuse/nuxt',
     'nuxt-capo',
     'nuxt-calendly',
@@ -92,6 +91,12 @@ export default defineNuxtConfig({
       stripQueryParameters: true,
     }
   },
+  image: {
+    imagekit: {
+      baseURL: process.env.NUXT_PUBLIC_IMAGEKIT_BASE_URL,
+    }
+  },
+
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
@@ -116,6 +121,7 @@ export default defineNuxtConfig({
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
     xsl: false,
     strictNuxtContentPaths: true,
+    autoI18n: false
   },
   gtag: {
     id: process.env.NUXT_PUBLIC_GA_ID,
@@ -125,9 +131,5 @@ export default defineNuxtConfig({
     ga: {
       id: `${process.env.NUXT_PUBLIC_GA_ID}`,
     },
-  },
-  googleAdsense: {
-    id: process.env.NUXT_PUBLIC_ADSENSE_ID,
-    pageLevelAds: true,
-  },
+  }
 })
