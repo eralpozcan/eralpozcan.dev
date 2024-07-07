@@ -2,9 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
+
   experimental: {
     payloadExtraction: false,
   },
+
   app: {
     head: {
       title: 'Eralp Özcan',
@@ -33,6 +35,7 @@ export default defineNuxtConfig({
       ]
     },
   },
+
   runtimeConfig: {
     public: {
       calendyStatus: process.env.NUXT_CALENDLY_ENABLED,
@@ -41,6 +44,7 @@ export default defineNuxtConfig({
     },
     githubToken: process.env.NUXT_GITHUB_TOKEN,
   },
+
   modules: [
     '@nuxt/image',
     '@nuxt/content',
@@ -55,8 +59,10 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    "@nuxtjs/html-validator"
   ],
+
   apollo: {
     clients: {
       default: {
@@ -69,17 +75,20 @@ export default defineNuxtConfig({
       }
     },
   },
+
   calendly: {
     isEnabled: true,
     loadWidgetCSS: true,
     loadWidgetCloseIconSvg: false,
   },
+
   colorMode: {
     preference: 'system', // default theme
     fallback: 'light', // fallback theme
     dataValue: 'theme', // activate data-theme in <html> tag
     classSuffix: '',
   },
+
   content: {
     highlight: {
       theme: 'nord',
@@ -91,6 +100,7 @@ export default defineNuxtConfig({
       stripQueryParameters: true,
     }
   },
+
   image: {
     imagekit: {
       baseURL: process.env.NUXT_PUBLIC_IMAGEKIT_BASE_URL,
@@ -100,11 +110,13 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
+
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
     }
   },
+
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: 'Eralp Özcan',
@@ -116,6 +128,7 @@ export default defineNuxtConfig({
     },
     debug: process.env.NUXT_NODE_ENV !== 'production',
   },
+
   sitemap: {
     enabled: true,
     cacheTtl: 1000 * 60 * 60 * 24, // 1 day
@@ -123,13 +136,17 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
     autoI18n: false
   },
+
   gtag: {
     id: process.env.NUXT_PUBLIC_GA_ID,
     loadingStrategy: 'async',
   },
+
   webVitals: {
     ga: {
       id: `${process.env.NUXT_PUBLIC_GA_ID}`,
     },
-  }
+  },
+
+  compatibilityDate: '2024-07-06'
 })
