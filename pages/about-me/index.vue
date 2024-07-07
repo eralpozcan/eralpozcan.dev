@@ -4,7 +4,7 @@
       <NuxtImg provider="imagekit" src="/profile_pic.webp" quality="80" loading="lazy" :placeholder="15" height="612" width="612" class="sm:max-w-sm md:max-w-md rounded-lg" alt="Eralp Özcan Profile Picture"/>
       <div class="">
         <h1 class="lg:text-4xl md:text-lg sm:text-base font-bold">{{ $t('hello_everyone')}}</h1>
-        <p class="text-base bg-base-900 p-2 italic">{{ $t('job_title') }} <NuxtLink to="https://protein.tech/" target="_blank">@ProteinTech</NuxtLink></p>
+        <p class="text-base bg-base-900 p-2 italic">{{ $t('job_title') }} <NuxtLink to="https://tatildukkani.com" target="_blank">@TatilDukkani</NuxtLink></p>
         <p class="text-base bg-base-900 p-2 italic">{{ $t('description') }}</p>
         <p class="text-base bg-base-900 p-2 italic">{{ $t('about_me') }}</p>
         <button class="btn btn-primary"><a href="/assets/EralpOzcanWebCV.pdf" download="">{{ $t('cv_download')}}</a></button>

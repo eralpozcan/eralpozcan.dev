@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         { name: 'language', content: 'English' },
         { hid: 'robots', name: 'robots', content: 'index, follow'},
         { name: 'application-name', content: 'Eralp Özcan' },
-        { name: 'description', content: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.' },
+        { name: 'description', content: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -120,7 +120,7 @@ export default defineNuxtConfig({
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: 'Eralp Özcan',
-    description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. He is currently working at Protein.Tech as a frontend developer.',
+    description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
     indexable: process.env.NUXT_NODE_ENV === 'production',
     defaultLocale: 'en',
     identity: {
