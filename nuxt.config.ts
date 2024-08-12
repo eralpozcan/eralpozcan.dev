@@ -51,11 +51,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-capo',
     'nuxt-calendly',
-    'nuxt-icon',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-gtag',
-    "@nuxtjs/html-validator"
+    "@nuxtjs/html-validator",
+    "@nuxt/icon"
   ],
 
   apollo: {
