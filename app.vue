@@ -1,8 +1,8 @@
 <template>
   <div>
-    <SiteHeader />
+    <NuxtLayout>
       <NuxtPage />
-    <SiteFooter />
+    </NuxtLayout>
   </div>
 </template>
 
