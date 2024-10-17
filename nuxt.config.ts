@@ -89,7 +89,7 @@ export default defineNuxtConfig({
       theme: 'nord',
       preload: ['ts','js','css','java','json','bash','vue']
     },
-    documentDriven: true,
+    documentDriven: false,
     experimental: {
       clientDB: true,
       stripQueryParameters: true,
