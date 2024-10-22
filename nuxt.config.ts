@@ -94,11 +94,11 @@ export default defineNuxtConfig({
     }
   },
 
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    }
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: ['/sitemap.xml']
+  //   }
+  // },
   scripts: {
     registry: {
       googleAnalytics: {
