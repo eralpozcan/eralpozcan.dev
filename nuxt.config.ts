@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     'nuxt-vitalizer',
     'nuxt-calendly',
     //'@nuxtjs/seo',
-    'nuxt-security',
+    //'nuxt-security',
     '@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
   ],
