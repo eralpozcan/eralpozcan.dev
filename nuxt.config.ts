@@ -124,16 +124,16 @@ export default defineNuxtConfig({
       authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
     },
   },
-  security: {
-    headers: {
-      contentSecurityPolicy: false,
-      // contentSecurityPolicy: {
-      //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
-      // },
-      referrerPolicy: 'strict-origin-when-cross-origin',
-    },
-    hidePoweredBy: true,
-  },
+  // security: {
+  //   headers: {
+  //     contentSecurityPolicy: false,
+  //     // contentSecurityPolicy: {
+  //     //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
+  //     // },
+  //     referrerPolicy: 'strict-origin-when-cross-origin',
+  //   },
+  //   hidePoweredBy: true,
+  // },
   // site: {
   //   url: process.env.NUXT_PUBLIC_SITE_URL,
   //   name: 'Eralp Özcan',
