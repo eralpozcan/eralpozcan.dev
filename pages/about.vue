@@ -27,7 +27,7 @@ const { t } = useI18n()
 
 // tslint:disable-next-line: no-empty
 const downloadCV = () => {
-  (proxy.gtag as function)('event', 'cv_download', {
+  (proxy.gtag as any)('event', 'cv_download', {
     event_category: 'cv',
     event_label: 'cv_download',
     value: 1
