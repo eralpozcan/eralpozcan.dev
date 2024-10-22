@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     '@nuxtjs/seo',
     'nuxt-security',
-    '@sentry/nuxt/module',
+    // '@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
   ],
 
