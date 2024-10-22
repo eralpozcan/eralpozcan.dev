@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     '@nuxtjs/seo',
     'nuxt-security',
-    //'@sentry/nuxt/module',
+    '@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
   ],
 
@@ -91,7 +91,6 @@ export default defineNuxtConfig({
       baseURL: process.env.NUXT_IMAGEKIT_BASE_URL,
     }
   },
-
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
@@ -115,13 +114,13 @@ export default defineNuxtConfig({
       logo: 'https://eralpozcan.dev/og-image.png'
     }
   },
-  // sentry: {
-  //   sourceMapsUploadOptions: {
-  //     org: "eralp-projects",
-  //     project: "eralpozcandev",
-  //     authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
-  //   },
-  // },
+  sentry: {
+    sourceMapsUploadOptions: {
+      org: "eralp-projects",
+      project: "eralpozcandev",
+      authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
+    },
+  },
   security: {
     headers: {
       contentSecurityPolicy: false,
