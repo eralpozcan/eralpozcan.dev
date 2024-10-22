@@ -114,13 +114,13 @@ export default defineNuxtConfig({
       logo: 'https://eralpozcan.dev/og-image.png'
     }
   },
-  sentry: {
-    sourceMapsUploadOptions: {
-      org: "eralp-projects",
-      project: "eralpozcandev",
-      authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
-    },
-  },
+  // sentry: {
+  //   sourceMapsUploadOptions: {
+  //     org: "eralp-projects",
+  //     project: "eralpozcandev",
+  //     authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
+  //   },
+  // },
   security: {
     headers: {
       contentSecurityPolicy: false,
