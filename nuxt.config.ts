@@ -1,9 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  future: {
-    compatibilityVersion: 4
-  },
+  compatibilityDate: '2024-10-09',
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in'},
@@ -39,9 +37,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-vitalizer',
     'nuxt-calendly',
-    //'@nuxtjs/seo',
-    //'nuxt-security',
-    '@sentry/nuxt/module',
+    '@nuxtjs/seo',
+    'nuxt-security',
+    //'@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
   ],
 
@@ -94,11 +92,11 @@ export default defineNuxtConfig({
     }
   },
 
-  // nitro: {
-  //   prerender: {
-  //     routes: ['/sitemap.xml']
-  //   }
-  // },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   scripts: {
     registry: {
       googleAnalytics: {
@@ -109,37 +107,37 @@ export default defineNuxtConfig({
       },
     }
   },
-  // schemaOrg: {
-  //   identity: {
-  //     type: 'Person',
-  //     name: 'Eralp Özcan',
-  //     url: 'https://eralpozcan.dev',
-  //     logo: 'https://eralpozcan.dev/og-image.png'
-  //   }
-  // },
-  sentry: {
-    sourceMapsUploadOptions: {
-      org: "eralp-projects",
-      project: "eralpozcandev",
-      authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
-    },
+  schemaOrg: {
+    identity: {
+      type: 'Person',
+      name: 'Eralp Özcan',
+      url: 'https://eralpozcan.dev',
+      logo: 'https://eralpozcan.dev/og-image.png'
+    }
   },
-  // security: {
-  //   headers: {
-  //     contentSecurityPolicy: false,
-  //     // contentSecurityPolicy: {
-  //     //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
-  //     // },
-  //     referrerPolicy: 'strict-origin-when-cross-origin',
+  // sentry: {
+  //   sourceMapsUploadOptions: {
+  //     org: "eralp-projects",
+  //     project: "eralpozcandev",
+  //     authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
   //   },
-  //   hidePoweredBy: true,
   // },
-  // site: {
-  //   url: process.env.NUXT_PUBLIC_SITE_URL,
-  //   name: 'Eralp Özcan',
-  //   description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
-  //   defaultLocale: 'en',
-  // },
+  security: {
+    headers: {
+      contentSecurityPolicy: false,
+      // contentSecurityPolicy: {
+      //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
+      // },
+      referrerPolicy: 'strict-origin-when-cross-origin',
+    },
+    hidePoweredBy: true,
+  },
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: 'Eralp Özcan',
+    description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
+    defaultLocale: 'en',
+  },
   vitalizer: {
     disablePrefetchLinks: true,
   },
@@ -149,5 +147,4 @@ export default defineNuxtConfig({
       id: `${process.env.NUXT_GOOGLE_ANALYTICS_ID}`,
     },
   },
-  compatibilityDate: '2024-10-09'
 })
