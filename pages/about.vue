@@ -25,9 +25,10 @@
 const { proxy } = useScriptGoogleAnalytics()
 const { t } = useI18n()
 
-// tslint:disable-next-line: no-empty
+
 const downloadCV = () => {
-  (proxy.gtag as any)('event', 'cv_download', {
+  // @ts-ignore
+  proxy.gtag('event', 'cv_download', {
     event_category: 'cv',
     event_label: 'cv_download',
     value: 1

@@ -138,7 +138,6 @@ export default defineNuxtConfig({
     description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
     defaultLocale: 'en',
   },
-  sourcemap: { client: true },
   vitalizer: {
     disablePrefetchLinks: true,
   },
