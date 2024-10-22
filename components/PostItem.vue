@@ -33,7 +33,7 @@ const props = defineProps({
 })
 
 const getTranslatedIcon = computed(() => {
-  let language = props.post.language.toLowerCase()
+  const language = props.post.language.toLowerCase()
   return `circle-flags:${language}`
 })
 </script>

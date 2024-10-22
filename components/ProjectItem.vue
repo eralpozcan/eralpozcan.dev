@@ -3,8 +3,13 @@ const props = defineProps({
   project: Object
 })
 
+interface Language {
+  name: string;
+  color: string;
+}
+
 const usedTechLanguages = computed(() => {
-  return props.project?.languages.nodes.slice(0, 3).map((lang: any) => {
+  return props.project?.languages.nodes.slice(0, 3).map((lang: Language) => {
     return {
       name: lang.name,
       color: lang.color
@@ -24,7 +29,7 @@ const usedTechLanguages = computed(() => {
         {{ props.project?.description }}
       </p>
       <div class="absolute bottom-2 left-2">
-        <span class="text-sm mt-1 font-medium px-2 py-2 ml-1 rounded" v-for="tech in usedTechLanguages" :style="{color:tech.color}"> {{ tech.name }}</span>
+        <span class="text-sm mt-1 font-medium px-2 py-2 ml-1 rounded" v-for="tech in usedTechLanguages" :key="tech.name" :style="{color:tech.color}"> {{ tech.name }}</span>
       </div>
       <div class="absolute bottom-2 right-4">
         <NuxtLink v-if="props?.project?.homepageUrl" :to="props.project.homepageUrl" target="_blank" rel="noopener">

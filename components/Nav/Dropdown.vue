@@ -6,7 +6,7 @@
       <!-- Dropdown -->
       <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
         <ul class="py-2 font-medium" role="none">
-          <li v-for="locale in languages" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+          <li v-for="locale in languages" :key="locale.code" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
             <div class="inline-flex items-center" @click="selectLanguage(locale.code)">
               <Icon :name="`circle-flags:`+ locale.code" size="1.2rem" class="fill-current"/>
               <span class="mx-1"> {{ locale.name }}</span>
@@ -18,8 +18,7 @@
 </template>
 
 <script setup>
-import { ref } from '#imports';
-import { onMounted } from '#imports'
+import { ref, onMounted } from '#imports'
 import { useFlowbite } from '~~/composables/useFlowbite';
 
 // initialize components based on data attribute selectors
