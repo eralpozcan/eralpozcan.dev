@@ -3,7 +3,7 @@ const { t } = useI18n()
 
 useSeoMeta({
   title: t('nav.blog'),
-  description: t('description') ,
+  description: t('description'),
   ogType: 'website',
   ogSiteName: t('nav.title') + ' - ' + t('nav.blog'),
   ogTitle: t('nav.title') + ' - ' + t('nav.blog'),

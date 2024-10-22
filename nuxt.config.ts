@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-vitalizer',
     'nuxt-calendly',
-    '@nuxtjs/seo',
+    //'@nuxtjs/seo',
     'nuxt-security',
     '@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
@@ -76,11 +76,8 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark',
-      },
-      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini'],
+      theme: 'nord',
+      preload: ['ts','js','css','java','json','bash','vue']
     },
   },
   i18n: {
@@ -96,6 +93,12 @@ export default defineNuxtConfig({
       baseURL: process.env.NUXT_IMAGEKIT_BASE_URL,
     }
   },
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   scripts: {
     registry: {
       googleAnalytics: {
@@ -106,21 +109,20 @@ export default defineNuxtConfig({
       },
     }
   },
-  schemaOrg: {
-    identity: {
-      type: 'Person',
-      name: 'Eralp Özcan',
-      url: 'https://eralpozcan.dev',
-      logo: 'https://eralpozcan.dev/og-image.png'
-    }
-  },
+  // schemaOrg: {
+  //   identity: {
+  //     type: 'Person',
+  //     name: 'Eralp Özcan',
+  //     url: 'https://eralpozcan.dev',
+  //     logo: 'https://eralpozcan.dev/og-image.png'
+  //   }
+  // },
   sentry: {
     sourceMapsUploadOptions: {
       org: "eralp-projects",
       project: "eralpozcandev",
       authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
     },
-    
   },
   security: {
     headers: {
@@ -132,12 +134,12 @@ export default defineNuxtConfig({
     },
     hidePoweredBy: true,
   },
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Eralp Özcan',
-    description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
-    defaultLocale: 'en',
-  },
+  // site: {
+  //   url: process.env.NUXT_PUBLIC_SITE_URL,
+  //   name: 'Eralp Özcan',
+  //   description: 'Eralp Özcan is a Full Stack Developer who is passionate about various web technologies. I am currently working at TatilDukkani as a frontend developer.',
+  //   defaultLocale: 'en',
+  // },
   vitalizer: {
     disablePrefetchLinks: true,
   },
