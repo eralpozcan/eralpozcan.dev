@@ -1,4 +1,4 @@
----
+<!-- ---
 title: How to Use Sentry with Vue 3?
 date: 2023-06-26
 cover: sentry.webp
@@ -11,7 +11,7 @@ sitemap:
   lastmod: 2023-06-26
   changefreq: monthly
   priority: 0.8
----
+--- -->
 
 # How to Use Sentry with Vue 3?
 
