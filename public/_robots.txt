@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /public/
+Sitemap: https://eralpozcan.dev/sitemap.xml
+
