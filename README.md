@@ -5,16 +5,8 @@
 <img src="https://img.shields.io/badge/Nuxt3-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82"></img>
 <img src="https://img.shields.io/badge/-Nuxt%20Content-00C58E?style=for-the-badge&logo=nuxtdotjs"></img>
 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"></img>
-<img src="https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white"></img>
-<img src="https://img.shields.io/badge/-Apollo%20GraphQL-311C87?style=for-the-badge&logo=apollo-graphql"></img>
 <img src="https://img.shields.io/badge/-Calendly-006BFF?style=for-the-badge&logo=Calendly"></img>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"></img>
 <img src="https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google%20analytics&logoColor=white"></img>
-
-
-
-
-
 
 
 <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m795910422-d728be06d89029e804de9d15">
