@@ -32,7 +32,7 @@ useSeoMeta({
 
 <template>
   <main>
-    <ContentDoc class="prose my-10 mx-auto max-w-7xl" />
+    <ContentDoc class="prose my-10 mx-auto max-w-4xl" />
   </main>
 </template>
 

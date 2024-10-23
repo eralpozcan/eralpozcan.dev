@@ -1,5 +1,6 @@
 ---
 title: How to Use Sentry with Vue 3?
+card_description: Don’t we often encounter errors and find it difficult to identify them? One of the error and performance monitoring tools is Sentry. In this article, I will explain how to set up Sentry and make improvements with performance monitoring. Are you ready? Let’s get started! 🚀
 date: 2023-06-26
 cover: sentry.webp
 ogImage: /assets/images/blog/sentry.webp
@@ -11,6 +12,7 @@ sitemap:
   lastmod: 2023-06-26
   changefreq: monthly
   priority: 0.8
+  loc: http://eralpozcan.dev/blog/how-to-use-sentry-with-vue-3
 ---
 
 # How to Use Sentry with Vue 3?
@@ -186,6 +188,6 @@ As has seen, we created a simple example using **Sentry**’s *Performance Monit
 
 In this article, I have tried to explain the usage and installation of **Sentry** and how it can be beneficial to us by providing examples.
 
-After reading my Medium post, feel free to reach out to me on my [Linkedin ](https://www.linkedin.com/in/eralpozcan/) account if you have any questions or suggestions.
+After reading my [Medium](https://medium.com/@eralpozcan/how-to-use-sentry-with-vue-3-a8495d482672) post, feel free to reach out to me on my [Linkedin ](https://www.linkedin.com/in/eralpozcan/) account if you have any questions or suggestions.
 
 See you in my next article! 📩

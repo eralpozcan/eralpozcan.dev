@@ -25,6 +25,7 @@ const { data: posts } = await useAsyncData('posts', () =>
 
 const isDynamicGrid = computed(() =>{
   if ((posts.value?.length ?? 0) <= 2) return 'grid md:grid-cols-3'
+  if ((posts.value?.length ?? 0) >= 4) return 'grid md:grid-cols-4'
   return `grid md:grid-cols-${posts.value?.length ?? 0}`
 })
 </script>

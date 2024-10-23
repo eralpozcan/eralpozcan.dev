@@ -1,16 +1,17 @@
 ---
 title: Vue3 ile Sentry Nasıl Kullanılır?
+card_description: Sıklıkla hatalar ile karşılaşıyoruz ve bunları bulmak bir o kadar da zor olmuyor mu? Hata ve Performans İzleme araçlarından bir tanesi de Sentry. Bu yazıda, Sentry’nin nasıl kurulacağını ve performans izlemesiyle nasıl iyileştirmeler yapabileceğimizi anlatacağım. Hazırsan başlıyoruz! 🚀
 date: 2023-06-26
 cover: sentry.webp
 ogImage: /assets/images/blog/sentry.webp
 language: TR
 links: 
   - medium: https://medium.com/@eralpozcan/vue3-ile-sentry-nasil-kullanilir-6e56dc18623d
-  - devto:  https://dev.to/eralpozcan/how-to-use-sentry-with-vue-3-2bi2
 sitemap:
   lastmod: 2023-06-26
   changefreq: monthly
   priority: 0.8
+  loc: http://eralpozcan.dev/blog/vue3-ile-sentry-nasil-kullanilir
 ---
 
 # Vue3 ile Sentry Nasıl Kullanılır?
@@ -92,11 +93,11 @@ Kurulumları tamamladıktan sonra **Sentry** bizi otomatik olarak aşağıdaki g
 
 👩‍💻 Basit bir button ve fonksiyon oluşturuyoruz.
 
-```js
-  <button @click="sendSentryData">Click me</button>
-  function sendSentryData() {
-      Sentry.captureMessage('Button clicked');
-  }
+```javascript
+<button @click="sendSentryData">Click me</button>
+function sendSentryData() {
+    Sentry.captureMessage('Button clicked');
+}
 ```
 
 Eğer bu fonksiyonu oluşturduğumuzda **Sentry**’yi import etmemiş ve tanımlamamışsanız. Aşağıda ki görselde ki hatayı alacaksınız.
@@ -167,6 +168,6 @@ Görüldüğü üzere, **Sentry**’nin sağladığı Performans İzleme aracın
 
 Bu yazımda ***Sentry***’nin kullanımı ve kurulumunun nasıl yapılacağına bize nasıl faydalı olacağına dair örnekler yaparak sizlere anlatmaya çalıştım.
 
-*Medium yazımı okuduktan sonra [Linkedin ](https://www.linkedin.com/in/eralpozcan/)hesabımdan sorularınız yada önerileriniz var ise ulaşabilirsiniz.*
+[Medium](https://medium.com/@eralpozcan/vue3-ile-sentry-nasil-kullanilir-6e56dc18623d) yazımı okuduktan sonra [Linkedin ](https://www.linkedin.com/in/eralpozcan/)hesabımdan sorularınız yada önerileriniz var ise ulaşabilirsiniz.
 
 Bir sonraki yazımda görüşmek üzere 📩

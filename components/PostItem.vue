@@ -11,13 +11,15 @@
           </NuxtLink>
       </template>
     </div>
-    <NuxtImg class="rounded-t-lg" :src="`assets/images/blog/${props.post.cover}`" alt="" />
+    <div class="flex justify-center">
+      <NuxtImg class="rounded-t-lg" height="135" width="340" :src="`assets/images/blog/${props.post.cover}`" alt="" />
+    </div>
     <div class="p-5">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {{ props.post.title }}
       </h5>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 min-h-48">
-        {{ props.post.description }}
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 h-36 overflow-hidden">
+        {{ props.post.card_description ? props.post.card_description : props.post.description }}
       </p>
       <NuxtLink :to="props.post?._path" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         {{ $t('blogs.read_more') }}
@@ -36,6 +38,5 @@ const getTranslatedIcon = computed(() => {
   const language = props.post.language.toLowerCase()
   return `circle-flags:${language}`
 })
-</script>
 
-<style></style>
+</script>

@@ -128,6 +128,7 @@ export default defineNuxtConfig({
       //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
       // },
       referrerPolicy: 'strict-origin-when-cross-origin',
+      xFrameOptions: 'DENY',
     },
     hidePoweredBy: true,
   },
