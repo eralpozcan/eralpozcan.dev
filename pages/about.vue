@@ -3,7 +3,7 @@
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 lg:gap-8 xl:gap-0 lg:py-16">
       <div class="place-self-center">
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">{{ $t('hello_everyone') }}</h1>
-        <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{ $t('job_title') }}<NuxtLink to="https://www.tatildukkani.com" target="_blank" class="hover:underline"> @TatilDukkani</NuxtLink></p>
+        <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{ $t('job_title') }}</p>
         <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{ $t('description') }}</p>
         <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{ $t('about_me') }}</p>
         <button 
