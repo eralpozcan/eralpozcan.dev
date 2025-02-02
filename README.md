@@ -9,8 +9,8 @@
 <img src="https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google%20analytics&logoColor=white"></img>
 
 
-<img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m795910422-d728be06d89029e804de9d15">
-<img alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m795910422-d728be06d89029e804de9d15">
+<img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m797989619-fd565095b4b5608e3015bce4">
+<img alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m797989619-fd565095b4b5608e3015bce4">
 </div>
 
 
@@ -19,7 +19,7 @@ This is a simple personal blog app built with Nuxt3, Nuxt Content and TailwindCS
 
 ### 📜 **Features**
 
-- Simple and clean design with TailwindCSS and DaisyUI
+- Simple and clean design with TailwindCSS and Flowbite
 - Automatic Project Page Github Integration
 - About Page 
 - Blog Page with Nuxt Content
