@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
@@ -37,7 +38,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-vitalizer',
     'nuxt-calendly',
-    '@nuxtjs/seo',
     'nuxt-security',
     // '@sentry/nuxt/module',
     '@nuxtjs/web-vitals'
@@ -82,7 +82,8 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
+      redirectOn: 'root',
+      cookieSecure: true,
     },
     vueI18n: './locales/i18n.config.ts' 
   },
@@ -98,6 +99,9 @@ export default defineNuxtConfig({
   },
   scripts: {
     registry: {
+      clarity: {
+        id: `${process.env.NUXT_PUBLIC_CLARITY_ID}`
+      },
       googleAnalytics: {
         id: `${process.env.NUXT_GOOGLE_ANALYTICS_ID}`
       },
@@ -114,23 +118,26 @@ export default defineNuxtConfig({
       logo: 'https://eralpozcan.dev/og-image.png'
     }
   },
-  // sentry: {
-  //   sourceMapsUploadOptions: {
-  //     org: "eralp-projects",
-  //     project: "eralpozcandev",
-  //     authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
-  //   },
-  // },
   security: {
     headers: {
-      contentSecurityPolicy: false,
-      // contentSecurityPolicy: {
-      //   'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com','https://opengraph.githubassets.com'],
-      // },
+      contentSecurityPolicy: {
+        'default-src': ["'self'"],
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://www.clarity.ms', 'https://www.microsoft.com'],
+        'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com', 'https://opengraph.githubassets.com', 'https://www.google-analytics.com'],
+        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+        'font-src': ["'self'", 'https://fonts.gstatic.com'],
+        'connect-src': ["'self'", 'https://ik.imagekit.io', 'https://api.github.com', 'https://www.google-analytics.com', 'https://www.clarity.ms', 'https://www.microsoft.com'],
+        'frame-src': ["'self'", 'https://www.youtube.com', 'https://www.clarity.ms', 'https://calendly.com'],
+        'media-src': ["'self'", 'https://ik.imagekit.io'],
+        'object-src': ["'none'"],
+        'base-uri': ["'self'"],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'none'"]
+      },
       referrerPolicy: 'strict-origin-when-cross-origin',
-      xFrameOptions: 'DENY',
+      xFrameOptions: 'DENY'
     },
-    hidePoweredBy: true,
+    hidePoweredBy: true
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,

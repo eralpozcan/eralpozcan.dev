@@ -9,9 +9,9 @@
   "bugs": {
     "url": "https://eralpozcan.dev"
   },
-  "repository": "",
+  "repository": "https://github.com/eralpozcan/eralpozcan.dev",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -22,28 +22,28 @@
   },
   "dependencies": {
     "@nuxt/content": "^2.13.4",
-    "@nuxt/icon": "^1.9.0",
-    "@nuxt/image": "^1.8.1",
+    "@nuxt/icon": "^1.10.3",
+    "@nuxt/image": "^1.9.0",
     "@nuxt/scripts": "^0.9.5",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/i18n": "^8.5.5",
-    "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@nuxtjs/i18n": "^9.1.5",
+    "@nuxtjs/seo": "^2.1.1",
     "@nuxtjs/web-vitals": "^0.2.7",
-    "@sentry/nuxt": "^8.41.0",
-    "@tailwindcss/typography": "^0.5.15",
+    "@sentry/nuxt": "^8.53.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@vercel/speed-insights": "^1.1.0",
-    "flowbite": "^2.5.2",
-    "nuxt": "^3.13.2",
+    "flowbite": "^3.1.1",
+    "nuxt": "^3.15.4",
     "nuxt-calendly": "^0.1.21",
-    "nuxt-security": "^2.1.4",
+    "nuxt-security": "^2.1.5",
     "nuxt-vitalizer": "^0.10.0",
-    "octokit": "^4.0.2"
+    "octokit": "^4.1.0"
   },
   "devDependencies": {
-    "@iconify-json/circle-flags": "^1.2.1",
-    "@iconify-json/fa-brands": "^1.2.0",
-    "@iconify-json/flowbite": "^1.2.2",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "flowbite-typography": "^1.0.4"
+    "@iconify-json/circle-flags": "^1.2.6",
+    "@iconify-json/fa-brands": "^1.2.1",
+    "@iconify-json/flowbite": "^1.2.4",
+    "@nuxtjs/tailwindcss": "^6.13.1",
+    "flowbite-typography": "^1.0.5"
   }
 }
