@@ -56,7 +56,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/blog/**': { headers: { contentSecurityPolicy: false } } 
   },
   
   calendly: {
