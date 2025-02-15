@@ -40,6 +40,8 @@ export default defineI18nConfig(() => ({
       about_me: 'Since 2021, I have been focusing on developing myself in Frontend and Backend, and I truly enjoy working in the world of software. Before transitioning to this field, I worked on artificial intelligence and data processing between 2018 and 2021. This background provided me with a strong foundation, but my true passion lies in creating innovative solutions through software development.',
       calendly_text: 'Schedule a meeting',
       read_more: 'Read More',
+      success: 'Message sent successfully',
+      error_message: 'An error occurred',
     },
     tr: {
       nav: {
@@ -73,12 +75,14 @@ export default defineI18nConfig(() => ({
         title: 'Projeler',
       },
       cv_download: 'CV İndir',
-      hello_everyone: '👋🏻 Merhaba,Ben Eralp Özcan!',
+      hello_everyone: '👋🏻 Merhaba, Ben Eralp Özcan!',
       job_title: 'Full-Stack Geliştirici',
       description: "Yenilikçi ve etkili yazılım çözümleri geliştirmeye tutkuyla bağlı bir Full Stack Developer'ım.",
       about_me: "2021 yılından bu yana Frontend ve Backend alanlarında yeteneklerimi geliştirmeye odaklanıyor ve kullanıcı odaklı, işlevsel uygulamalar yaratmaktan büyük bir memnuniyet duyuyorum. Yazılım geliştirme alanına geçmeden önce, 2018-2021 yılları arasında yapay zeka ve veri işleme üzerine çalıştım ve bu deneyim bana güçlü bir teknik temel sağladı. Geçmişteki tecrübelerim yolculuğumu şekillendirse de, asıl tutkum yazılım aracılığıyla fark yaratan çözümler üretmek.",
       calendly_text: 'Bir toplantı ayarla',
       read_more: 'Devamını Oku',
+      success: 'Mesaj başarıyla gönderildi',
+      error_message: 'Bir hata oluştu',
     }
   }
 }))

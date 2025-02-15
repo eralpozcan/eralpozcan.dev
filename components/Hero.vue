@@ -7,7 +7,7 @@
             <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{ $t('description') }}</p>
         </div>
         <div class="lg:mt-0 lg:col-span-5 lg:flex">
-          <NuxtImg provider="imagekit" preload src="/profile_pic.webp" quality="80" loading="lazy" :placeholder="15" height="448" width="448" class="sm:max-w-sm md:max-w-md rounded-lg" alt="Eralp Özcan Profile Picture"/>
+          <NuxtImg src="/assets/images/profile_pic.webp" quality="80" loading="lazy" height="448" width="448" class="sm:max-w-sm md:max-w-md rounded-lg" alt="Eralp Özcan Profile Picture"/>
         </div>
     </div>
 </section>

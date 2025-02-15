@@ -39,8 +39,7 @@ export default defineNuxtConfig({
     'nuxt-vitalizer',
     'nuxt-calendly',
     'nuxt-security',
-    // '@sentry/nuxt/module',
-    '@nuxtjs/web-vitals'
+    '@nuxtjs/web-vitals',
   ],
 
   runtimeConfig: {
@@ -92,12 +91,20 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       cookieSecure: true,
     },
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English'
+      },
+      {
+        code: 'tr',
+        iso: 'tr-TR',
+        name: 'Türkçe'
+      }
+    ],
     vueI18n: './locales/i18n.config.ts' 
-  },
-  image: {
-    imagekit: {
-      baseURL: process.env.NUXT_IMAGEKIT_BASE_URL,
-    }
   },
   nitro: {
     prerender: {
@@ -129,17 +136,17 @@ export default defineNuxtConfig({
     nonce: true,
     headers: {
       contentSecurityPolicy: {
-        'default-src': ["'self'"],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://www.clarity.ms', 'https://www.microsoft.com'],
-        'img-src': ["'self'", 'data:', 'https://ik.imagekit.io', 'https://repository-images.githubusercontent.com', 'https://opengraph.githubassets.com', 'https://www.google-analytics.com'],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-        'font-src': ["'self'", 'https://fonts.gstatic.com'],
-        'connect-src': ["'self'", 'https://ik.imagekit.io', 'https://api.github.com', 'https://www.google-analytics.com', 'https://www.clarity.ms', 'https://www.microsoft.com'],
-        'frame-src': ["'self'", 'https://www.youtube.com', 'https://www.clarity.ms', 'https://calendly.com'],
-        'media-src': ["'self'", 'https://ik.imagekit.io'],
+        'default-src': ["'self'", 'https://*', 'ws://*', 'wss://*', 'ws://localhost:*', 'http://localhost:*'],
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*'],
+        'img-src': ["'self'", 'data:', 'https://*'],
+        'style-src': ["'self'", "'unsafe-inline'", 'https://*'],
+        'font-src': ["'self'", 'https://*', 'data:'],
+        'connect-src': ["'self'", 'https://*', 'wss://*', 'ws://*', 'ws://localhost:*', 'http://localhost:*'],
+        'frame-src': ["'self'", 'https://*'],
+        'media-src': ["'self'", 'https://*'],
         'object-src': ["'none'"],
         'base-uri': ["'self'"],
-        'form-action': ["'self'"],
+        'form-action': ["'self'", 'https://*'],
         'frame-ancestors': ["'none'"]
       },
       referrerPolicy: 'strict-origin-when-cross-origin',
