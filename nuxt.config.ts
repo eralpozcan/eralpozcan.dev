@@ -136,22 +136,35 @@ export default defineNuxtConfig({
     nonce: false,
     headers: {
       contentSecurityPolicy: {
-        'default-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*', 'http://*'],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*', 'http://*'],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://*'],
-        'img-src': ["'self'", 'data:', 'https://*', 'http://*'],
-        'font-src': ["'self'", 'data:', 'https://*'],
-        'connect-src': ["'self'", 'https://*', 'http://*', 'ws://*', 'wss://*'],
-        'frame-src': ["'self'", 'https://*'],
-        'object-src': ["'none'"],
-        'base-uri': ["'self'"],
-        'form-action': ["'self'", 'https://*'],
+        'default-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*'],
+        'img-src': ["'self'", 'data:', 'https://*'],
+        'connect-src': ["'self'", 'https://*', 'wss://*'],
         'frame-ancestors': ["'none'"]
       },
+      crossOriginEmbedderPolicy: false,
+      crossOriginOpenerPolicy: false,
+      crossOriginResourcePolicy: false,
+      originAgentCluster: false,
       referrerPolicy: 'strict-origin-when-cross-origin',
+      strictTransportSecurity: {
+        maxAge: 15552000,
+        includeSubdomains: true
+      },
       xFrameOptions: 'DENY'
     },
-    hidePoweredBy: true
+    requestSizeLimiter: {
+      maxRequestSizeInBytes: 2000000,
+      maxUploadFileRequestInBytes: 8000000,
+    },
+    rateLimiter: false,
+    xssValidator: false,
+    corsHandler: {
+      origin: '*',
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+      preflight: {
+        statusCode: 204
+      }
+    }
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
