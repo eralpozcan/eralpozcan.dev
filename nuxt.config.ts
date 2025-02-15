@@ -135,13 +135,6 @@ export default defineNuxtConfig({
   security: {
     nonce: false,
     headers: {
-      contentSecurityPolicy: {
-        'default-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*'],
-        'img-src': ["'self'", 'data:', 'https://*'],
-        'connect-src': ["'self'", 'https://*', 'wss://*'],
-        'frame-ancestors': ["'none'"]
-      },
-      crossOriginEmbedderPolicy: false,
       crossOriginOpenerPolicy: false,
       crossOriginResourcePolicy: false,
       originAgentCluster: false,
