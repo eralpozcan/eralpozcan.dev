@@ -133,17 +133,16 @@ export default defineNuxtConfig({
     }
   },
   security: {
-    nonce: true,
+    nonce: false,
     headers: {
       contentSecurityPolicy: {
-        'default-src': ["'self'", 'https://*', 'ws://*', 'wss://*', 'ws://localhost:*', 'http://localhost:*'],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*'],
-        'img-src': ["'self'", 'data:', 'https://*'],
+        'default-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*', 'http://*'],
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://*', 'http://*'],
         'style-src': ["'self'", "'unsafe-inline'", 'https://*'],
-        'font-src': ["'self'", 'https://*', 'data:'],
-        'connect-src': ["'self'", 'https://*', 'wss://*', 'ws://*', 'ws://localhost:*', 'http://localhost:*'],
+        'img-src': ["'self'", 'data:', 'https://*', 'http://*'],
+        'font-src': ["'self'", 'data:', 'https://*'],
+        'connect-src': ["'self'", 'https://*', 'http://*', 'ws://*', 'wss://*'],
         'frame-src': ["'self'", 'https://*'],
-        'media-src': ["'self'", 'https://*'],
         'object-src': ["'none'"],
         'base-uri': ["'self'"],
         'form-action': ["'self'", 'https://*'],
