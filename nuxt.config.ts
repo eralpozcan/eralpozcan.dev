@@ -150,7 +150,15 @@ export default defineNuxtConfig({
       maxRequestSizeInBytes: 2000000,
       maxUploadFileRequestInBytes: 8000000,
     },
-    rateLimiter: false,
+    rateLimiter: {
+      tokensPerInterval: 150,
+      interval: 300000,
+      headers: false,
+      driver: {
+        name: 'lruCache'
+      },
+      throwError: true
+    },
     xssValidator: false,
     corsHandler: {
       origin: '*',
